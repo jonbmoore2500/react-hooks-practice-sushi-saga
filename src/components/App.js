@@ -16,7 +16,7 @@ function App() {
   }, [])
 
   function subtractMoney(id) {
-    setMoneyRemaining(moneyRemaining - sushiData[id].price)
+    setMoneyRemaining(moneyRemaining - sushiData[id - 1].price)
   }
 
   function addPlate(id) {
