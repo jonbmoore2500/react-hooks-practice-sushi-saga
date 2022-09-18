@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import MoreButton from "./MoreButton";
 import Sushi from "./Sushi.js"
 
-function SushiContainer({sushiData, moneyRemaining}) {
+function SushiContainer({sushiData, moneyRemaining, subtractMoney, addPlate}) {
   const [sushiDispIndex, setSushiDispIndex] = useState(0)
   const sushiDisp = sushiData.slice(sushiDispIndex, sushiDispIndex + 4)
   function onMoreClick() {
@@ -12,6 +12,8 @@ function SushiContainer({sushiData, moneyRemaining}) {
   function handleEaten(eatenId) {
     console.log(eatenId)
     console.log(moneyRemaining)
+    subtractMoney(eatenId)
+    addPlate(eatenId)
   }
 
   return (

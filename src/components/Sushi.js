@@ -5,7 +5,7 @@ function Sushi({sushi, onEatenClick, moneyRemaining}) {
   const [eaten, setEaten] = useState(false)
 
   function handleEaten() {
-    if (moneyRemaining >= price) {
+    if (moneyRemaining - price >= 0) {
       if (eaten === false) {
         setEaten(true)
         }
